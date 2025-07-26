@@ -3,8 +3,12 @@ pragma solidity ^0.8.20;
 
 contract Guestbook{
 
-    //maping
-    mapping (address=> string) public guestBook;
+    //struct
+    struct signature{
+        address owner;
+        string message;
+        uint256 timestamp;     
+    }
     
 
     function post() public payable {
