@@ -26,6 +26,9 @@ contract Guestbook{
             timestamp:block.timestamp
         }));
         emit SIGNTUREPOSTED(msg.sender,_message,block.timestamp);
+    }  
 
-    }   
+    function ShowSignatures() public view returns(signature[] memory){
+        return signatures;
+    } 
 }
